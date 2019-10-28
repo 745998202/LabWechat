@@ -1,3 +1,6 @@
+
+
+
 # 云开发 quickstart
 
 这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
@@ -10,3 +13,17 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+---
+
+## Labcug (CUG地信学院微信实验室预约小程序)
+
+创建时间2019/10/28 19：11
+创建人:dragonyao
+项目进度：
+
+[ ] 小程序学习
+[ ] 项目初期搭建
+[ ] 项目中期验收
+[ ] 详细功能实现
+[ ] 项目测试验收
+[ ] 论文编写
