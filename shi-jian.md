@@ -115,5 +115,41 @@ currentTarget为当前事件所绑定的组件，而target则是触发该事件�
 </view>
 ```
 
+```text
+//page.js
+Page({
+    handleTap: function(evt){
+       // 当点击inner节点时
+       // evt.target 是inner view组件
+       // evt.currentTarget 是绑定了handleTap的outer view组件
+       // evt.type == “tap”
+       // evt.timeStamp == 1542
+       // evt.detail == {x: 270, y: 63}
+       // evt.touches == [{identifier: 0, pageX: 270, pageY: 63, clientX: 270, clientY: 63}]
+       // evt.changedTouches == [{identifier: 0, pageX: 270, pageY: 63, clientX: 270, clientY: 63}]
+    }
+})
+```
 
+有关targe和currentTarget对象的详细参数如下所示
+
+| 属性 | 类型 | 说明 |
+| :--- | :--- | :--- |
+| id | String | 当前组件的id |
+| tagName | String | 当前组件的类型 |
+| dataset | Object | 当前组件上由data-开头的自定义属性组成的集合 |
+
+有关touch和changeTouches对象的详细参数如下所示
+
+| 属性 | 类型 | 说明 |
+| :--- | :--- | :--- |
+| identifier | Number | 触摸点的标识符 |
+| pageX, pageY | Number | 距离文档左上角的距离，文档的左上角为原点 ，横向为X轴，纵向为Y轴 |
+| clientX, clientY | Number | 距离页面可显示区域（屏幕除去导航条）左上角距离，横向为X轴，纵向为Y轴 |
+
+### 事件绑定与冒泡捕获
+
+事件绑定的写法和组件属性一致，以key=”value“的形式，其中：
+
+1. key 以 bind 或者 catch开头，然后跟上事件的类型，如bindtap,catchtouchstart。自基础库版本1.5.0起，bind和catch后可以紧跟一个冒号，其含义不变，如bind:tap、catch:touchstart。同时bind和catch前还可以加上capture-来表示捕获阶段。
 
