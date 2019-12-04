@@ -8,4 +8,5 @@
 * [组件](zu-jian.md)
 * [API](api.md)
 * [事件](shi-jian.md)
+* [兼容](jian-rong.md)
 
