@@ -32,7 +32,7 @@ description: 小程序 - 事件
 
 由于不同组件的状态不一样，所以这里不讨论组件相关的事件（组件的事件可以参考其参数说明），详情见官方文档 [https://mp.weixin.qq.com/debug/wxadoc/dev/component/ ](https://mp.weixin.qq.com/debug/wxadoc/dev/component/%20)
 
-常见的事件类型
+常见的事件类型 表3-10
 
 <table>
   <thead>
@@ -152,4 +152,43 @@ Page({
 事件绑定的写法和组件属性一致，以key=”value“的形式，其中：
 
 1. key 以 bind 或者 catch开头，然后跟上事件的类型，如bindtap,catchtouchstart。自基础库版本1.5.0起，bind和catch后可以紧跟一个冒号，其含义不变，如bind:tap、catch:touchstart。同时bind和catch前还可以加上capture-来表示捕获阶段。
+2. value是一个字符串，需要在对应的页面Page构造器中定义同名的函数，否则触发事件时在控制台会有报错信息 bind 和 capture-bind的含义分别代表事件的冒泡阶段和捕获阶段，其触发的顺序如下
+
+![&#x4E8B;&#x4EF6;&#x6355;&#x83B7;&#x548C;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;](.gitbook/assets/image%20%284%29.png)
+
+```text
+<view
+  id="outer"
+  bind:touchstart="handleTap1"
+  capture-bind:touchstart="handleTap2">
+  outer view
+  <view
+    id="inner"
+    bind:touchstart="handleTap3"
+    capture-bind:touchstart="handleTap4">
+    inner view
+  </view>
+</view>
+```
+
+bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以阻止冒泡事件向上冒泡，如果将上面代码中第一个capture-bind改为capture-catch，将只触发handleTap2\(capture-catch将中断捕获阶段和取消冒泡阶段\)
+
+```text
+<view
+  id="outer"
+  bind:touchstart="handleTap1"
+  capture-catch:touchstart="handleTap2"
+>
+  outer view
+  <view
+    id="inner"
+    bind:touchstart="handleTap3"
+    capture-bind:touchstart="handleTap4"
+  >
+    inner view
+  </view>
+</view>
+```
+
+注意，除表3-10列举的事件类型之外的其他组件自定义事件，如无特殊声明都是非冒泡事件，如&lt;form&gt;的submit事件，&lt;input/&gt;的input事件，&lt;scroll-view&gt;的scroll事件。
 
