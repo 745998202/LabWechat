@@ -4,6 +4,8 @@ description: 小程序组件
 
 # 组件
 
+组件属性官方文档：[https://mp.weixin.qq.com/debug/wxadoc/dev/component/](https://mp.weixin.qq.com/debug/wxadoc/dev/component/)
+
 一个小程序页面由多个部分组成，组件就是小程序的基本组成单元。
 
 组件是在WXML模板文件声明中使用的，WXML的语法和HTML语法相似，小程序使用标签名来引用一个组件，通常包含**开始标签**和**结束标签**，该标签的属性用来描述该组件
