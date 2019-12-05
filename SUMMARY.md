@@ -9,4 +9,5 @@
 * [API](api.md)
 * [事件](shi-jian.md)
 * [兼容](jian-rong.md)
+* [布局](bu-ju.md)
 
