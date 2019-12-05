@@ -1,5 +1,5 @@
 ---
-description: 小程序的Flex布局详解
+description: 小程序的基本布局方法
 ---
 
 # 布局
