@@ -8,7 +8,7 @@ description: 小程序 - 事件
 
 在小程序里边，我们把“用户在渲染层的行为反馈”以及“组件的部分状态反馈”抽象为渲染层传递给逻辑层的**“事件”**
 
-![&#x6E32;&#x67D3;&#x5C42;&#x4EA7;&#x751F;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x7ED9;&#x903B;&#x8F91;&#x5C42;](.gitbook/assets/image%20%281%29.png)
+![&#x6E32;&#x67D3;&#x5C42;&#x4EA7;&#x751F;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x7ED9;&#x903B;&#x8F91;&#x5C42;](../.gitbook/assets/image%20%281%29.png)
 
 一个简单的事件处理小程序代码
 
@@ -154,7 +154,7 @@ Page({
 1. key 以 bind 或者 catch开头，然后跟上事件的类型，如bindtap,catchtouchstart。自基础库版本1.5.0起，bind和catch后可以紧跟一个冒号，其含义不变，如bind:tap、catch:touchstart。同时bind和catch前还可以加上capture-来表示捕获阶段。
 2. value是一个字符串，需要在对应的页面Page构造器中定义同名的函数，否则触发事件时在控制台会有报错信息 bind 和 capture-bind的含义分别代表事件的冒泡阶段和捕获阶段，其触发的顺序如下
 
-![&#x4E8B;&#x4EF6;&#x6355;&#x83B7;&#x548C;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;](.gitbook/assets/image%20%2811%29.png)
+![&#x4E8B;&#x4EF6;&#x6355;&#x83B7;&#x548C;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;](../.gitbook/assets/image%20%2811%29.png)
 
 ```text
 <view
