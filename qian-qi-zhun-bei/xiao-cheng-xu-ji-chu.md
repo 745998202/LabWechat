@@ -271,7 +271,7 @@ onShareAppMessage: function () {
 
 一个小程序拥有多个页面，我们可以通过wx.navigateTo推入一个新的页面，如3-6所示，在首页使用2次wx.navigateTo后，页面层级会有三层，我们把这样的页面层级称之为页面栈
 
-![&#x9875;&#x9762;&#x6808;](../.gitbook/assets/image%20%282%29.png)
+![&#x9875;&#x9762;&#x6808;](../.gitbook/assets/image%20%285%29.png)
 
 后续为了表述方便，我们采用这样的方式进行描述页面栈：\[ pageA, pageB, pageC \]，其中pageA在最底下，pageC在最顶上，也就是用户所看到的界面，小程序宿主环境限制了这个页面栈的最大层级为10层 ，也就是当页面栈到达10层之后就没有办法再推入新的页面了。我们下面来通过上边这个页面栈描述以下几个和导航相关的API。 使用 wx.navigateTo\({ url: 'pageD' }\) 可以往当前页面栈多推入一个 pageD，此时页面栈变成 \[ pageA, pageB, pageC, pageD \]。 使用 wx.navigateBack\(\) 可以退出当前页面栈的最顶上页面，此时页面栈变成 \[ pageA, pageB, pageC \]。 使用wx.redirectTo\({ url: 'pageE' }\) 是替换当前页变成pageE，此时页面栈变成 \[ pageA, pageB, pageE \]，当页面栈到达10层没法再新增的时候，往往就是使用redirectTo这个API进行页面跳转。 小程序提供了原生的Tabbar支持，我们可以在app.json声明tabBar字段来定义Tabbar页（注：更多详细参数见Tabbar官方文档 ）。
 
