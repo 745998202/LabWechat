@@ -154,7 +154,7 @@ Page({
 1. key 以 bind 或者 catch开头，然后跟上事件的类型，如bindtap,catchtouchstart。自基础库版本1.5.0起，bind和catch后可以紧跟一个冒号，其含义不变，如bind:tap、catch:touchstart。同时bind和catch前还可以加上capture-来表示捕获阶段。
 2. value是一个字符串，需要在对应的页面Page构造器中定义同名的函数，否则触发事件时在控制台会有报错信息 bind 和 capture-bind的含义分别代表事件的冒泡阶段和捕获阶段，其触发的顺序如下
 
-![&#x4E8B;&#x4EF6;&#x6355;&#x83B7;&#x548C;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;](../.gitbook/assets/image%20%2812%29.png)
+![&#x4E8B;&#x4EF6;&#x6355;&#x83B7;&#x548C;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;](../.gitbook/assets/image%20%2813%29.png)
 
 ```text
 <view

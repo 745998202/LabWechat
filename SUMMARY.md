@@ -12,6 +12,7 @@
 * [布局](qian-qi-zhun-bei/bu-ju.md)
 * [界面交互反馈](qian-qi-zhun-bei/jie-mian-jiao-hu-fan-kui.md)
 * [发起HTTPS网络通信](qian-qi-zhun-bei/fa-qi-https-wang-luo-tong-xin.md)
+* [微信登陆](qian-qi-zhun-bei/wei-xin-deng-lu.md)
 
 ## 架构设计
 
