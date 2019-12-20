@@ -14,6 +14,7 @@
 * [发起HTTPS网络通信](qian-qi-zhun-bei/fa-qi-https-wang-luo-tong-xin.md)
 * [微信登陆](qian-qi-zhun-bei/wei-xin-deng-lu.md)
 * [本地数据缓存](qian-qi-zhun-bei/ben-di-shu-ju-huan-cun.md)
+* [本地数据缓存](qian-qi-zhun-bei/ben-di-shu-ju-huan-cun-1.md)
 * [设备能力](qian-qi-zhun-bei/she-bei-neng-li.md)
 * [配置](qian-qi-zhun-bei/pei-zhi.md)
 
