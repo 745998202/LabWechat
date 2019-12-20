@@ -8,7 +8,7 @@ description: 对于用户的操作进行反馈
 
 通常页面上会摆放一些button按钮或者view区域，用户触摸按钮之后会触发下一步操作。这种情况下，我们要对触摸这个行为给予用户一定的响应。
 
-![&#x89E6;&#x6478;&#x533A;&#x57DF;&#x5E95;&#x8272;&#x53D8;&#x6210;&#x7070;&#x8272;](../.gitbook/assets/image%20%2819%29.png)
+![&#x89E6;&#x6478;&#x533A;&#x57DF;&#x5E95;&#x8272;&#x53D8;&#x6210;&#x7070;&#x8272;](../.gitbook/assets/image%20%2820%29.png)
 
 小程序的view容器组件和button组件提供了hover-class属性，触摸时会往该组件加上对应的class改变组件的样式
 
@@ -30,7 +30,7 @@ background-color : gray;
 
 对于用户的操作及时响应是非常优秀的体验，有时在点击button按钮处理更耗时的操作时，我们也会使用button组件的loading属性，在按钮的文字前边出现Loading，让用户明确感觉到，这个操作会比较耗时，需要等待一小段时间
 
-![button&#x6587;&#x5B57;&#x524D;&#x51FA;&#x73B0;loading](../.gitbook/assets/image%20%2826%29.png)
+![button&#x6587;&#x5B57;&#x524D;&#x51FA;&#x73B0;loading](../.gitbook/assets/image%20%2827%29.png)
 
 ```text
 <!--page.wxml-->
@@ -62,7 +62,7 @@ Page({
 
 在完成某个操作成功之后，我们希望告诉用户这次操作成功并且不打断用户接下来的操作。弹出式提示Toast就是用在这样的场景上，Toast提示默认1.5秒后自动消失，其表现形式如下图所示
 
-![Toast&#x5F39;&#x51FA;&#x63D0;&#x793A;](../.gitbook/assets/image%20%287%29.png)
+![Toast&#x5F39;&#x51FA;&#x63D0;&#x793A;](../.gitbook/assets/image%20%288%29.png)
 
 小程序提供了显示隐藏Toast接口，代码示例如下
 
@@ -85,7 +85,7 @@ onLoad:function(){
 
 特别要注意，我们不应该把Toast用于错误提示，因为错误提示需要明确告诉用户具体原因，因此不适合用这种一闪而过的Toast弹出式提示。一般需要用户知晓操作状态的话，会使用模态对话框来提示，同时附带下一步操作的指引
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../.gitbook/assets/image%20%2826%29.png)
 
 ```text
   tips:function(){
@@ -110,7 +110,7 @@ onLoad:function(){
 
 往往手机屏幕是承载不了所有信息的，所以内容区域肯定会超出屏幕区域，用户可以通过滑动屏幕来查看下一屏的内容，这是非常常见的界面滚动的交互。为了让用户可以快速刷新当前界面的信息，一般在小程序里会通过下拉整个界面这个操作来触发
 
-![&#x4E0B;&#x62C9;&#x5237;&#x65B0;](../.gitbook/assets/image%20%2816%29.png)
+![&#x4E0B;&#x62C9;&#x5237;&#x65B0;](../.gitbook/assets/image%20%2817%29.png)
 
 ```text
 //page.json
